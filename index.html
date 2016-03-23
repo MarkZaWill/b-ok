@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Be Ok</title>
+
+    <!-- BOOTSTRAP CSS-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- END BOOTSTRAP CSS-->
+    <!-- Google Fonts -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- End Google Fonts -->
+    
+
+    <link rel="stylesheet" href="styles/styles.css">
+
+
+</head>
+
+
+<body ng-app="MarkApp">
+<nav ng-include="'partials/navBar.html'"></nav>
+
+<div ng-view></div>
+
+
+
+  
+
+	
+<!-- My Dependencies -->
+	
+ 
+
+
+  <script src="lib/bower_components/angular/angular.min.js"></script>
+  <script src="lib/bower_components/angular-route/angular-route.min.js"></script>
+  <script src="lib/bower_components/firebase/firebase.js"></script>
+  <script src="lib/bower_components/angularfire/dist/angularfire.min.js"></script>
+
+  <!--My Factories  -->
+  <script src="app/app.js"></script>
+  <!-- <script src="app/factories/MovieFactory.js"></script> -->
+  <script src="app/factories/AuthFactory.js"></script>
+  
+
+
+
+ <!-- My controllers -->
+
+
+
+ <!--  <script src="app/controllers/MovieCtrl.js"></script>
+  <script src="app/controllers/MovieDetailCtrl.js"></script>
+  <script src="app/controllers/MovieFormCtrl.js"></script>
+  <script src="app/controllers/PageCtrl.js"></script> -->
+ 
+  
+
+ <script src="app/controllers/LoginCtrl.js"></script>
+ <script src="app/controllers/howAreYouCtrl.js"></script>
+ <script src="app/controllers/copingSkills.js"></script>
+ <script src="app/directives/starRating.js"></script>
+
+
+<!--  <script src="app/controllers/emotionCtrl.js"></script> -->
+
+
+    <!-- JQuery Library -->
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!-- BOOTSTRAP JS -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- END BOOTSTRAP JS -->
+    <script src"scripts/scripts.js"></script>
+</body>
+</html>

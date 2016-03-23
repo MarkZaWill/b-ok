@@ -1,0 +1,14 @@
+<h1>How Are You Today?</h1>
+<h3>On a scale of 1 to 10</h3>
+
+<body ng-app="RatingTutorial" ng-controller="howAreYouCtrl">
+  
+    <h3>Rating</h3>
+ <div ng-init="rating = star.rating + 1"></div>
+
+<div class="star-rating" star-rating rating-value="rating"
+
+ data-max="10" on-rating-selected="rateFunction(rating)"></div>
+</body>
+
+ <a href="#/copingSkills"><button> Submit!</button></a>

@@ -1,0 +1,11 @@
+.hidden {
+	display: none;
+}
+
+.rating .filled {
+color: #21568b;
+}
+
+.rating {
+	font-size: 3em;
+}
