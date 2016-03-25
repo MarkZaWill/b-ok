@@ -6,7 +6,7 @@ MarkApp.controller("copingSkills",
   "$routeParams",
   "$location",
   "$http",
-  "FireFactory"
+  "FireFactory",
 
   	function ($scope, $routeParams, $location, $http, FireFactory) {
   		
@@ -39,8 +39,6 @@ MarkApp.controller("copingSkills",
         .delete(`https://be-ok.firebaseio.com/copingSkills/${$routeParams.copingSkillsId}.json`)
         .then(() => $location.url("/"));
   }
-  	}
-
  
 
   	])
