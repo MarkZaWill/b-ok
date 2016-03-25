@@ -1,18 +1,19 @@
 "use strict";
 
-MarkApp.controller("copingSkills",
+MarkApp.controller("updateSkill",
 [
   "$scope",
   "$location",
   "$http",
   "firebaseURL",
   "authFactory",
+  
 
   function ($scope, $location, $http, firebaseURL, authFactory) {
-
+    console.log("$scope.selectedSkills", $scope.selectedSkills);
     // Default property values for keys bound to input fields
-    $scope.newSkill = {
-      title: "",
+    $scope.updateSkill = {
+      title: `{{$scope.selectedSkills.title}}`,
       skill: ""
     };
 
@@ -20,12 +21,12 @@ MarkApp.controller("copingSkills",
     $scope.addSkill = () => {
 
       let user = authFactory.getUser();
-      let newSkill = {
-        title: $scope.newSkill.title,
-        skill: $scope.newSkill.skill,
+      let updateSkill = {
+        title: `{{$scope.selectedSkills.title}}`,
+        skill: $scope.updateSkill.skill,
         uid: user.uid
       };
-      console.log("newSkill", newSkill);
+      console.log("updateSkill", updateSkill);
 
       // POST the song to Firebase
       $http.post(`${firebaseURL}/copingSkills.json`,
@@ -42,5 +43,3 @@ MarkApp.controller("copingSkills",
     };
   }
 ]);
-
-  

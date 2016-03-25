@@ -46,32 +46,47 @@ MarkApp.config(["$routeProvider",
       }).
       when("/copingSkills", {
         templateUrl: "partials/copingSkills.html",
-        // controller: "MovieFormCtrl",
+        controller: "jsonkilla",
         resolve: { isAuth }
       }).
-      when("/mad", {
+      when("/mood/mad", {
         templateUrl: "partials/mad.html",
         controller: "copingSkills",
         resolve: { isAuth }
       }). 
-      when("/glad", {
+      when("/mood/glad", {
         templateUrl: "partials/glad.html",
         controller: "copingSkills",
         resolve: { isAuth }
       }). 
-      when("/sad", {
+      when("/mood/sad", {
         templateUrl: "partials/sad.html",
         controller: "copingSkills",
         resolve: { isAuth }
       }). 
-      when("/scared", {
+      when("/mood/scared", {
         templateUrl: "partials/scared.html",
         controller: "copingSkills",
         resolve: { isAuth }
       }).
-      when("/icky", {
+      when("/mood/icky", {
         templateUrl: "partials/icky.html",
         controller: "copingSkills",
+        resolve: { isAuth }
+      }).
+       when("/addSkill", {
+        templateUrl: "partials/addSkill.html",
+        controller: "copingSkills",
+        resolve: { isAuth }
+      }).
+       when("/mood/:skillid", {
+        templateUrl: "partials/viewSkill.html",
+        controller: "jsonkilla",
+        resolve: { isAuth }
+      }).
+       when("/updateSkill", {
+        templateUrl: "partials/updateSkill.html",
+        controller: "jsonkilla",
         resolve: { isAuth }
       }).
       otherwise({

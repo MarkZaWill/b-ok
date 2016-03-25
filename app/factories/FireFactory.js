@@ -1,16 +1,17 @@
 "use strict";
 
-MarkApp.factory("FireFactory", ($q, $http) =>
-  function makeCope () {
-    return $q((resolve, reject) => // Return a promise for our async XHR
-      $http
-        .get("https://moviehistbnc.firebaseio.com/movies.json")
+MarkApp.factory("FireFactory", ($q, $http, authFactory, firebaseURL) =>
+   () =>
+    $q((resolve, reject) => { 
+      let user = authFactory.getUser();
+      console.log("user.uid", user.uid);
+        $http
+        .get(`${firebaseURL}copingSkills.json`)
         .success(
           copeGroup => 
           	{resolve(copeGroup)
           		console.log("SUCCESS", copeGroup);},
           error => reject(error)
-        )
-    )
-    return makeCope
-});
+        );
+      })
+);

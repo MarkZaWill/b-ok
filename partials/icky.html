@@ -1,5 +1,6 @@
 <h1>I'm Sorry You Feel Icky</h1>
 
+<div ng-controller="jsonkilla">
 <div> Have you tried any of these things?</div>
 <div>You could:</div>
 <ul>
@@ -12,7 +13,12 @@
 	<li>Listen to a good song</li>
 	<li>If you are sick, call the doctor or get someone to take you to the doctor</li>
 	<li>The quicker you get help when you feel gross, the quicker you can get back to feeling good again</li>
-
-	
+	<li ng-repeat="skill in copingSkills">
+		
+      <a href="#/mood/{{ skill.title }}">{{skill.skill}}</a>
+    </li>	
 </ul>
-
+</div>
+<div ng-controller="copingSkills">
+<a href="#/addSkill"><button>Add Your Own Skill!</button></a>
+</div>

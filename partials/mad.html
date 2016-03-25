@@ -1,5 +1,5 @@
 <h1>I'm Sorry You Feel Mad</h1>
-
+<div ng-controller="jsonkilla">
 <div> Have you tried any of these things?</div>
 <div>You could:</div>
 <ul>
@@ -11,7 +11,12 @@
 	<li>Write in your notebook or your journal</li>
 	<li>Listen to a good song</li>
 	<li>Remember: being angry doesn't last.  What lasts longer is how you act when you are angry.</li>
-
-	
+	<li ng-repeat="skill in copingSkills">
+		
+      <a href="#/mood/{{ skill.title }}">{{skill.skill}}</a>
+    </li>	
 </ul>
-
+</div>
+<div ng-controller="copingSkills">
+<a href="#/addSkill"><button>Add Your Own Skill!</button></a>
+</div>
