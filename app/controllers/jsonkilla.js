@@ -41,6 +41,7 @@ MarkApp.controller("jsonkilla",
         .delete(`https://be-ok.firebaseio.com/copingSkills/${$routeParams.skillid}.json`)
         .then(() => $location.url("/"));
     $scope.updateSkill = () => $http
+
         .$save(`https://be-ok.firebaseio.com/copingSkills/${$routeParams.skillid}.json`)
         .then(() => $location.url("/"));
 

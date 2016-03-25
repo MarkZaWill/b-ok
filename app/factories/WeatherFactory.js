@@ -15,6 +15,7 @@ MarkApp.factory("WeatherFactory", ($q, $http, authFactory, firebaseURL) =>
           error => reject(error)
         );
       })
+
 );
 
 
@@ -26,4 +27,6 @@ MarkApp.factory("WeatherFactory", ($q, $http, authFactory, firebaseURL) =>
 //  http://disneymeals.me/wp-content/uploads/2015/11/IMG_20151101_100604.jpg
 // http://screenrant.com/wp-content/uploads/Game-of-Thrones-Finale-Jon-Snow-Dead-Killed.jpg
 // https://static.pexels.com/photos/9601/flight-clouds-airplane-view.jpg
+
+
 

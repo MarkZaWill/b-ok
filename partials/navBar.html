@@ -1,3 +1,7 @@
 <div>
-<a href="#/logout">Logout</a>
+<a href="#/login" ng-click="logout()">
+        <span ng-if="isAuthenticated()">Logout</span>
+        <span ng-if="!isAuthenticated()">Login</span>
+      </a>
 </div>
+

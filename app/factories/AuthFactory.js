@@ -1,6 +1,6 @@
 "use strict";
 
-MarkApp.factory("authFactory", (firebaseURL) => {
+MarkApp.factory("authFactory", ($http, firebaseURL) => {
   let ref = new Firebase(firebaseURL);
   let currentUserData = null;
 
@@ -8,14 +8,14 @@ MarkApp.factory("authFactory", (firebaseURL) => {
     /*
       Determine if the client is authenticated
      */
-    isAuthenticated () {
+    isAuthenticated() {
       let authData = ref.getAuth();
-        currentUserData = authData;
-      if (authData) {
-        return true;
-      } else {
-        return false;
-      }
+        return (authData) ? true : false;
+    },
+
+    getUser() {
+      console.log("currentUserData", currentUserData);
+      return currentUserData;
     },
     /*
       Authenticate the client via Firebase
@@ -29,14 +29,30 @@ MarkApp.factory("authFactory", (firebaseURL) => {
           if (error) {
             reject(error);
           } else {
-            console.log("authWithPassword method completed successfully");
+            console.log("authWithPassword method completed successfully", authData);
+            currentUserData = authData;
+            console.log("currentUserData", currentUserData.uid);
             resolve(authData);
           }
         });
       });
+    },
+    storeUser (authData) {
+      let stringifiedUser = JSON.stringify({ uid: authData.uid });
+
+      return new Promise((resolve, reject) => {
+        $http
+          .post(`https://be-ok.firebaseio.com/users.json`, stringifiedUser)
+          .then(
+            res => resolve(res),
+            err => reject(err)
+          );
+      });
     }
+
   };
 });
+
 
 
 

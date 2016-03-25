@@ -1,5 +1,5 @@
 <h1>Well, look at you, feeling pretty good</h1>
-
+<div ng-controller="jsonkilla">
 <div>Let's keep it up!</div>
 <div>You could:</div>
 <ul>
@@ -14,5 +14,12 @@
 	<li>Learn a new skill like coding!</li>
 	<li>Be helpful to someone who might not be feeling as good as you right now</li>
 	<li>Listen to some good music</li>
+<li ng-repeat="skill in copingSkills">
+		
+      <a href="#/mood/{{ skill.title }}">{{skill.skill}}</a>
+    </li>	
 </ul>
-
+</div>
+<div ng-controller="copingSkills">
+<a href="#/addSkill"><button>Add Your Own Skill!</button></a>
+</div>

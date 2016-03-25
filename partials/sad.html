@@ -1,5 +1,5 @@
 <h1>I'm Sorry You Feel Sad</h1>
-
+<div ng-controller="jsonkilla">
 <div> Have you tried any of these things?</div>
 <div>You could:</div>
 <ul>
@@ -14,5 +14,12 @@
 	<li>If you are really sad and you are thinking about hurting yourself, please the  call Suicide Hotline at 1(800)273-8255</li>
 	<li>Remember: You are not bothering anyone if you ask for help.</li>
 	<li>You are worth more than you realize</li>
+	<li ng-repeat="skill in copingSkills">
+		
+      <a href="#/mood/{{ skill.title }}">{{skill.skill}}</a>
+    </li>	
 </ul>
-
+</div>
+<div ng-controller="copingSkills">
+<a href="#/addSkill"><button>Add Your Own Skill!</button></a>
+</div>

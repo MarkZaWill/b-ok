@@ -3,9 +3,9 @@
 MarkApp.controller("copingSkills",
 [
   "$scope",
-  "$routeParams",
   "$location",
   "$http",
+<<<<<<< HEAD
   "FireFactory",
 
   	function ($scope, $routeParams, $location, $http, FireFactory) {
@@ -42,3 +42,44 @@ MarkApp.controller("copingSkills",
  
 
   	])
+=======
+  "firebaseURL",
+  "authFactory",
+
+  function ($scope, $location, $http, firebaseURL, authFactory) {
+
+    // Default property values for keys bound to input fields
+    $scope.newSkill = {
+      title: "",
+      skill: ""
+    };
+
+    // Function bound to the Add Song button in the view template
+    $scope.addSkill = () => {
+
+      let user = authFactory.getUser();
+      let newSkill = {
+        title: $scope.newSkill.title,
+        skill: $scope.newSkill.skill,
+        uid: user.uid
+      };
+      console.log("newSkill", newSkill);
+
+      // POST the song to Firebase
+      $http.post(`${firebaseURL}/copingSkills.json`,
+
+        // Remember to stringify objects/arrays before
+        // sending them to an API
+        JSON.stringify(newSkill)
+
+      // The $http.post() method returns a promise, so you can use then()
+      ).then(
+        () => $location.url("/mood/"),      // Handle resolve
+        (response) => console.log(response)  // Handle reject
+      );
+    };
+  }
+]);
+
+  
+>>>>>>> c4ff8fa93cc7db98f3ba5da78f0e2d986857df61
