@@ -14,9 +14,10 @@
 	<li>Learn a new skill like coding!</li>
 	<li>Be helpful to someone who might not be feeling as good as you right now</li>
 	<li>Listen to some good music</li>
-<li ng-repeat="skill in copingSkills">
-		
-      <a href="#/mood/{{ skill.title }}">{{skill.skill}}</a>
+	<li ng-repeat="rawCopingSkill in rawCopingSkills">
+      <a href="#/mood/{{rawCopingSkill.title}}">{{rawCopingSkill.skill}}</a>
+      <a href="" ng-click= "deleteSkill(rawCopingSkill)">Delete</a>
+      <input ng-model="rawCopingSkill.skill" ng-change="rawCopingSkills.$save(rawCopingSkill)">Update</input>
     </li>	
 </ul>
 </div>

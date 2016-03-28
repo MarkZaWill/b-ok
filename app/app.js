@@ -56,7 +56,7 @@ MarkApp.config(["$routeProvider",
       }). 
       when("/mood/glad", {
         templateUrl: "partials/glad.html",
-        controller: "copingSkills",
+        controller: "jsonkilla",
         resolve: { isAuth }
       }). 
       when("/mood/sad", {
@@ -86,7 +86,7 @@ MarkApp.config(["$routeProvider",
       }).
        when("/updateSkill", {
         templateUrl: "partials/updateSkill.html",
-        controller: "jsonkilla",
+        controller: "updateSkill",
         resolve: { isAuth }
       }).
       otherwise({

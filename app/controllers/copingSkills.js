@@ -5,44 +5,6 @@ MarkApp.controller("copingSkills",
   "$scope",
   "$location",
   "$http",
-<<<<<<< HEAD
-  "FireFactory",
-
-  	function ($scope, $routeParams, $location, $http, FireFactory) {
-  		
-    // Default properties for bound variables
-    $scope.copingSkills = [];
-    $scope.selectedCopingSkills = {};
-
-    // Invoke the promise that reads from Firebase
-    FireFactory().then(
-
-      // Handle resolve() from the promise
-      copeGroup => {
-        Object.keys(copeGroup).forEach(key => {
-          copeGroup[key].id = key;
-          $scope.copingSkills.push(copeGroup[key]);
-        });
-
-        $scope.selectedCopingSkills = $scope.copingSkills.filter(copingSkills => copingSkills.id === $routeParams.copingSkillsId)[0];
-      },
-
-      // Handle reject() from the promise
-      err => console.log(err)
-    );
-
-    /*
-      This function is bound to an ng-click directive
-      on the button in the view
-    */
-    $scope.deletecopingSkills = () => $http
-        .delete(`https://be-ok.firebaseio.com/copingSkills/${$routeParams.copingSkillsId}.json`)
-        .then(() => $location.url("/"));
-  }
- 
-
-  	])
-=======
   "firebaseURL",
   "authFactory",
 
@@ -81,5 +43,3 @@ MarkApp.controller("copingSkills",
   }
 ]);
 
-  
->>>>>>> c4ff8fa93cc7db98f3ba5da78f0e2d986857df61

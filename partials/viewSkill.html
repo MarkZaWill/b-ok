@@ -1,11 +1,11 @@
 <div>
-    <h1>{{ selectedSkills.skill }}</h1>
+    <h1>{{}}</h1>
   </div>
 
 <div>
- <input type="input" id="skill" ng-model="updateSkill.skill"></input>
-  <button ng-click="updateSkill()">Update Skill</button>
+ <input type="input" id="skill" ng-model="rawCopingSkill.skill" ng-change="rawCopingSkills.$save(rawCopingSkill)" placeholder="{{}}"></input>
+  <button  ng-click="updateSkill(rawCopingSkill)">Update Skill</button>
 </div>
 <div>
-  <button ng-click="deleteSkill()">Delete Skill</button>
+  <a href="#/mood/" ng-click="deleteSkill()">Delete Skill</a>
 </div>

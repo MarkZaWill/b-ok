@@ -1,24 +1,26 @@
 "use strict";
 
-MarkApp.factory("FireFactory", ($q, $http, authFactory, firebaseURL) =>
-   () =>
-    $q((resolve, reject) => { 
+MarkApp.service("FireFactory",["$firebaseArray", function ($firebaseArray) {
+    var arr;
+     var ref = new Firebase('https://be-ok.firebaseio.com/copingSkills');
+     arr = $firebaseArray(ref);
+    
+     // to take an action after the data loads, use the $loaded() promise
+     arr.$loaded().then(function() {
+        
+        console.log("arr", arr);
 
-      let user = authFactory.getUser();
-      console.log("user.uid", user.uid);
-        $http
-        .get(`${firebaseURL}copingSkills.json`)
-        .success(
-          copeGroup => 
-          	{resolve(copeGroup)
-          		console.log("SUCCESS", copeGroup);},
-          error => reject(error)
+       // To iterate the key/value pairs of the object, use angular.forEach()
+       // angular.forEach(arr, function(value, key) {
+       //    console.log(key, value);
+       //    console.log("arr", arr);
+       // });
+       return arr;
 
+     });
 
-        )
-    return makeCope
-}));
-
-
+    
+  
+}]);
 
 

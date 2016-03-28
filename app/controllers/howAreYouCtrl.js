@@ -3,20 +3,13 @@
 MarkApp.controller("howAreYouCtrl",
 [
   "$scope",
-  "$location",
-  "$http",
+  "$firebaseArray",
+ 	function (scope, $firebaseArray) {
+ 		rawCopingSkills.$remove().then(
+ 			() => $location.url("/"));
 
-  	function ($scope, $location, $http) {
-  	$scope.rateFunction = function( rating )
-{
-       var _url = 'https://be-ok.firebaseio.com';
- 
- var data = {
-   rating: rating
- };
- 
-};
-}
-]) 
+ 	}
+ 	]);
+
 
  
