@@ -9,3 +9,122 @@ color: #21568b;
 .rating {
 	font-size: 3em;
 }
+
+body{
+	font-family: Hind;
+	margin: 10px;
+	background-repeat: none;
+	background-size: cover;
+	color: yellow;
+
+}
+
+#Headline {
+	text-align: center;
+	font-style: Bold;
+	color: blue;
+	text-shadow: 0px 3px 4px darkblue;
+	font-size: 10em;
+	background-image: url(https://www.nps.gov/common/uploads/akr/park/grsm/8AF13C48-1DD8-B71C-07BCBD8CCF0921AB/8AF13C48-1DD8-B71C-07BCBD8CCF0921AB.jpg?width=688);
+	background-repeat: none;
+	background-size: cover;
+
+}
+
+.logging {
+	text-decoration: none;
+	color: black;
+}
+
+#intro {
+	text-align: center;
+	text-decoration: bold;
+	color: darkblue;
+	font-size: 5em;
+}
+img{
+	width: 15%;
+	margin: 2%;
+	align-items: center;
+	position: relative;	
+	text-align: center;
+}
+
+.loginInput {
+	text-align: center;
+}
+
+.loginBox {
+	text-align: center;
+}
+
+.headers {
+	text-align: center;
+	text-decoration: bold;
+	color: darkblue;
+	font-size: 5em;
+}
+
+.subHead {
+	
+	text-decoration: bold;
+	font-size: 2em;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	margin-bottom: 5px;
+	font-size: 1.5em;
+}
+button {
+	border-radius: 20px;
+	background-color: orange;
+}
+
+.sunny{
+	background-image: url(http://disneymeals.me/wp-content/uploads/2015/11/IMG_20151101_100604.jpg);
+	background-repeat: none;
+	background-size: cover;
+}
+
+.foggy{
+	background-image: url(http://disneymeals.me/wp-content/uploads/2015/11/IMG_20151101_100604.jpg);
+	background-repeat: none;
+	background-size: cover;
+}
+}
+
+.rainy{
+	background-image: url(onehdwallpaper.com/wp-content/uploads/2015/06/Rain-Falling-Desktop-Backgrounds.jpg);
+	background-repeat: none;
+	background-size: cover;
+}
+}
+
+.stormy{
+	background-image: url(http://martinschmaltz.com/wp-content/uploads/thunderstorm.jpg);
+	background-repeat: none;
+	background-size: cover;
+}
+}
+
+.snowy{
+	background-image: url(http://screenrant.com/wp-content/uploads/Game-of-Thrones-Finale-Jon-Snow-Dead-Killed.jpg);
+	background-repeat: none;
+	background-size: cover;
+}
+}
+
+.extreme{
+	background-image: url(http://wallpaperswa.com/thumbnails/detail/20121014/minimalistic%20vector%20squirrels%20warning%20vector%20art%201920x1080%20wallpaper_www.wallpaperswa.com_68.jpg);
+	background-repeat: none;
+	background-size: cover;
+}
+}
+
+
+
+

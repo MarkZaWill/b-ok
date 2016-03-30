@@ -13,7 +13,9 @@ MarkApp.controller("jsonkilla",
  
 
   function ($scope, $routeParams, $location, $http, FireFactory, authFactory, $firebaseArray) {
-  		
+  	
+    let user = authFactory.getUser();
+      	
     // Default properties for bound variables
     $scope.copingSkills = [];
     $scope.selectedSkills = {};
@@ -58,19 +60,26 @@ MarkApp.controller("jsonkilla",
     //  };
      $scope.deleteSkill = function(rawCopingSkill){ 
       console.log("id", rawCopingSkill);
-      $scope.rawCopingSkills.$remove(rawCopingSkill).then(() => $location.url("/"));}   
+      $scope.rawCopingSkills.$remove(rawCopingSkill).then(() => $location.url("#/mood/"));}   
      // $scope.deleteSkill = () => $http
      //    .delete(`https://be-ok.firebaseio.com/copingSkills/${$routeParams.skillsId}.json`)
      //    .then(() => $location.url("/"));
    
-    $scope.updateSkill = function(rawCopingSkill) {
-    console.log(rawCopingSkill);
-      $scope.rawCopingSkills.$save(rawCopingSkill).then(() => $location.url("/"));
-      console.log("$scope.rawCopingSkills", $scope.rawCopingSkills);}
+    // $scope.updateSkill = function(rawCopingSkill) {
+    // console.log(rawCopingSkill);
+    //   $scope.rawCopingSkills.$save(rawCopingSkill).then(() => $location.url("/"));
+    //   console.log("$scope.rawCopingSkills", $scope.rawCopingSkills);}
 
    $scope.addSkill = function (newSkill) {
+    let user = authFactory.getUser();
+      newSkill = {
+        skill: $scope.newSkill.skill,
+        uid: user.uid
+      };
     console.log("this was clicked");
-      $scope.rawCopingSkills.$add(newSkill);}
+      $scope.rawCopingSkills.$add(newSkill).then(()=> $location.url("#/mood/"));}
+
+
 
     // $http
     //     .$save(`https://be-ok.firebaseio.com/copingSkills/${$routeParams.skillid}.json`)
