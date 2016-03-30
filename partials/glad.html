@@ -1,7 +1,7 @@
-<h1>Well, look at you, feeling pretty good</h1>
+<h1 class="headers">Well, look at you, feeling pretty good</h1>
 <div ng-controller="jsonkilla">
-<div>Let's keep it up!</div>
-<div>You could:</div>
+<div class="subHead">Let's keep it up!</div>
+<div class="subHead">You could:</div>
 <ul>
 	
 	<li>Talk to someone close to you.</li>
@@ -14,12 +14,15 @@
 	<li>Learn a new skill like coding!</li>
 	<li>Be helpful to someone who might not be feeling as good as you right now</li>
 	<li>Listen to some good music</li>
-<li ng-repeat="skill in copingSkills">
-		
-      <a href="#/mood/{{ skill.title }}">{{skill.skill}}</a>
+	<li ng-repeat="rawCopingSkill in rawCopingSkills">
+      <div>{{rawCopingSkill.skill}}</div>
+      <button ng-click= "deleteSkill(rawCopingSkill)">Delete</button>
+      <input ng-model="rawCopingSkill.skill" ng-change="rawCopingSkills.$save(rawCopingSkill)"></input>
+    </li>
+    <li> <input type="input" id="skill" ng-model="newSkill.skill">Skill</input>
+<button ng-click="addSkill()" >Add Your Own Skill!</button>
+    	
     </li>	
 </ul>
-</div>
-<div ng-controller="copingSkills">
-<a href="#/addSkill"><button>Add Your Own Skill!</button></a>
+
 </div>

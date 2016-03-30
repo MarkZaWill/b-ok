@@ -43,4 +43,3 @@ MarkApp.controller("copingSkills",
   }
 ]);
 
-  
