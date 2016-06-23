@@ -17,7 +17,7 @@ MarkApp.controller("updateSkill",
       skill: ""
     };
 
-    // Function bound to the Add Song button in the view template
+    // Function bound to the Add Skill button in the view template
     $scope.addSkill = () => {
 
       let user = authFactory.getUser();
@@ -28,7 +28,7 @@ MarkApp.controller("updateSkill",
       };
       console.log("updateSkill", updateSkill);
 
-      // POST the song to Firebase
+      // POST the skill to Firebase
       $http.post(`${firebaseURL}/copingSkills.json`,
 
         // Remember to stringify objects/arrays before
