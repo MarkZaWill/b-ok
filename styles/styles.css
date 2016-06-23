@@ -15,7 +15,7 @@ body{
 	margin: 10px;
 	background-repeat: none;
 	background-size: cover;
-	color: yellow;
+	
 
 }
 
@@ -31,9 +31,11 @@ body{
 
 }
 
+
+
 .logging {
 	text-decoration: none;
-	color: black;
+	color: white;
 }
 
 #intro {
@@ -63,21 +65,31 @@ img{
 	text-decoration: bold;
 	color: darkblue;
 	font-size: 5em;
+
 }
 
 .subHead {
 	
 	text-decoration: bold;
 	font-size: 2em;
+	color: darkblue;
+	text-shadow: 1.5px 2px lightblue;
+		background-color:rgba(204,204,204,0.5);
 }
 
 ul {
 	list-style-type: none;
+	background-color:rgba(204,204,204,0.5);
+	color: black;
+
 }
 
 li {
 	margin-bottom: 5px;
 	font-size: 1.5em;
+	color: black;
+
+
 }
 button {
 	border-radius: 20px;
@@ -85,9 +97,10 @@ button {
 }
 
 .sunny{
-	background-image: url(http://disneymeals.me/wp-content/uploads/2015/11/IMG_20151101_100604.jpg);
+	background-image: url(https://i.ytimg.com/vi/3EXe5cx5S-0/maxresdefault.jpg);
 	background-repeat: none;
 	background-size: cover;
+
 }
 
 .foggy{
@@ -95,35 +108,36 @@ button {
 	background-repeat: none;
 	background-size: cover;
 }
-}
+
 
 .rainy{
-	background-image: url(onehdwallpaper.com/wp-content/uploads/2015/06/Rain-Falling-Desktop-Backgrounds.jpg);
+	background-image: url(http://onehdwallpaper.com/wp-content/uploads/2015/06/Rain-Falling-Desktop-Backgrounds.jpg);
 	background-repeat: none;
 	background-size: cover;
-}
+
 }
 
 .stormy{
 	background-image: url(http://martinschmaltz.com/wp-content/uploads/thunderstorm.jpg);
 	background-repeat: none;
 	background-size: cover;
-}
+
 }
 
 .snowy{
 	background-image: url(http://screenrant.com/wp-content/uploads/Game-of-Thrones-Finale-Jon-Snow-Dead-Killed.jpg);
 	background-repeat: none;
 	background-size: cover;
-}
+
 }
 
 .extreme{
 	background-image: url(http://wallpaperswa.com/thumbnails/detail/20121014/minimalistic%20vector%20squirrels%20warning%20vector%20art%201920x1080%20wallpaper_www.wallpaperswa.com_68.jpg);
 	background-repeat: none;
 	background-size: cover;
+
 }
-}
+
 
 
 

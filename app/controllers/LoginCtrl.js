@@ -22,6 +22,10 @@ MarkApp.controller("LoginCtrl",
       ref.unauth();
     }
 
+    $scope.logout = () => {
+      ref.unauth();
+    }
+
     /*
       Attempt to register a new user account.
       If successful, immediately log user in.
@@ -48,8 +52,10 @@ MarkApp.controller("LoginCtrl",
       authFactory
         .authenticate($scope.account)
         .then(() => {
-          $location.path("/howAreYou.html");
+          $location.path("/copingSkills");
+          console.log("this was clicked");
           $scope.$apply();  // Needed for $location.path() to succeed
+         
         });
 
 

@@ -5,6 +5,8 @@
 let MarkApp = angular.module("MarkApp", ["ngRoute", "firebase"])
   .constant('firebaseURL', "https://be-ok.firebaseio.com/");
 
+
+let authorized;
 /*
   Define a promise for any view that needs an authenticated user
   before it will resolve (see below)
@@ -27,9 +29,8 @@ MarkApp.config(["$routeProvider",
     $routeProvider.
 
       when("/", {
-        templateUrl: "partials/dailyEmotion.html",
-        // controller: "emotionCtrl",
-        resolve: { isAuth }
+        templateUrl: "partials/login.html",
+         controller: "LoginCtrl"
       }).
       when("/login", {
         templateUrl: "partials/login.html",
@@ -39,13 +40,8 @@ MarkApp.config(["$routeProvider",
         templateUrl: "partials/login.html",
         controller: "LoginCtrl"
       }).
-      when("/howAreYou", {
-        templateUrl: "partials/howAreYou.html",
-        controller: "howAreYouCtrl",
-        resolve: { isAuth }
-      }).
       when("/copingSkills", {
-        templateUrl: "partials/copingSkills.html",
+        templateUrl: "partials/dailyEmotion.html",
         controller: "jsonkilla",
         resolve: { isAuth }
       }).
