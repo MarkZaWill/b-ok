@@ -16,7 +16,7 @@ MarkApp.controller("copingSkills",
       skill: ""
     };
 
-    // Function bound to the Add Song button in the view template
+    // Function bound to the add button in the view template
     $scope.addSkill = () => {
 
       let user = authFactory.getUser();
@@ -27,11 +27,10 @@ MarkApp.controller("copingSkills",
       };
       console.log("newSkill", newSkill);
 
-      // POST the song to Firebase
+      // POST to Firebase
       $http.post(`${firebaseURL}/copingSkills.json`,
 
-        // Remember to stringify objects/arrays before
-        // sending them to an API
+        // Stringified the JSON to send to the API
         JSON.stringify(newSkill)
 
       // The $http.post() method returns a promise, so you can use then()
