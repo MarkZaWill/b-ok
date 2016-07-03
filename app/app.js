@@ -22,7 +22,7 @@ let isAuth = (authFactory) => new Promise((resolve, reject) => {
 });
 
 /*
-  Set up routes for Movie History app
+  Set up routes for my app
  */
 MarkApp.config(["$routeProvider",
   function ($routeProvider) {
