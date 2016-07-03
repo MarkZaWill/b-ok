@@ -31,11 +31,10 @@ MarkApp.controller("updateSkill",
       // POST the skill to Firebase
       $http.post(`${firebaseURL}/copingSkills.json`,
 
-        // Remember to stringify objects/arrays before
-        // sending them to an API
-        JSON.stringify(newSkill)
+        // Stringify to send to API
+      JSON.stringify(newSkill)
 
-      // The $http.post() method returns a promise, so you can use then()
+      // Return Promise
       ).then(
         () => $location.url("/mood/"),      // Handle resolve
         (response) => console.log(response)  // Handle reject
