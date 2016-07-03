@@ -10,11 +10,6 @@ MarkApp.service("FireFactory",["$firebaseArray", function ($firebaseArray) {
         
         console.log("arr", arr);
 
-       // To iterate the key/value pairs of the object, use angular.forEach()
-       // angular.forEach(arr, function(value, key) {
-       //    console.log(key, value);
-       //    console.log("arr", arr);
-       // });
        return arr;
 
      });
